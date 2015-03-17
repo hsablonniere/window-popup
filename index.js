@@ -5,7 +5,7 @@
 
     document.querySelector('button').onclick = function () {
         var windowFeatures = 'toolbar=no,location=no,width=' + w + ',height=' + h + ',top=' + y + ',left=' + x;
-        win = window.open('http://localhost:9999/', '', windowFeatures);
+        win = window.open(location.href, '', windowFeatures);
     };
 
     document.querySelector('#left').oninput = function (e) {
@@ -47,4 +47,4 @@
             document.querySelector('#screen-sizes').innerHTML += prop + ' : ' + window.screen[prop] + '<br>';
         });
     }, 1000);
-})()
+})();
